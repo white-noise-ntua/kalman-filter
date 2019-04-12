@@ -25,6 +25,7 @@ float Kalman::filter(float z, float u) {
   if (!init) {
     x = 1 / C * z;
     cov = Q / (C * C);
+    init = true;
   }
 
   else {
